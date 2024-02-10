@@ -1,6 +1,7 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import { Controller } from 'react-hook-form'
+import conf from '../conf/conf'
 const RTE = ({name,control,label,defaultValue=""}) => { //control pass on info to whom they call it
   return (
     <div className='w-full'>
@@ -11,7 +12,7 @@ const RTE = ({name,control,label,defaultValue=""}) => { //control pass on info t
         control={control}
         render={({field:{onChange}})=>(
             <Editor
-            apiKey='2gg44054d29ir1fe0a88vy0is1at0gd1a445hbufjadu4yp3'
+            apiKey={conf.appwriteAPIID}
             initialValue={defaultValue}
             init={{
                 initialValue: defaultValue,
