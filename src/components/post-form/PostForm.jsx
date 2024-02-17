@@ -17,6 +17,8 @@ export default function PostForm({post}) {
 
     const navigate = useNavigate();
     const userData = useSelector((state) => state.auth.userdata);
+    // console.log(userData.documents.$id);
+    // console.log(userData.$id);
 
     const submit = async (data) => {
         if (post) {
@@ -115,7 +117,7 @@ export default function PostForm({post}) {
                     {...register("status", { required: true })}
                 />
                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
-                    {post ? "Update" : "Submit"}{console.log(post)}
+                    {post ? "Update" : "Submit"}
                 </Button>
             </div>
         </form>
